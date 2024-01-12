@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+// App.js
+import React from 'react';
+import FileFolderList from './components/FileFolderList';
+import ImageDisplay from './components/ImageDisplay';
+const App = () => {
+  const fileFolderData = [
+    { id: 1, name: 'File 1' },
+    { id: 2, name: 'Folder 1' },
+    // Add more data as needed
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <FileFolderList data={fileFolderData} />
     </div>
   );
-}
-
+};
 export default App;
